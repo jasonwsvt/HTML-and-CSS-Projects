@@ -1,0 +1,15 @@
+table {
+	background: navy;
+}
+
+td {
+	color: skyblue;
+}
+
+td:hover {
+	text-decoration: underline;
+}
+
+table:hover {
+	border: thin solid black;
+}
