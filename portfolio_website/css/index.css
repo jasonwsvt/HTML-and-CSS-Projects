@@ -9,3 +9,56 @@ body {
 	background-position: center center;
 	height: 100%;
 }
+
+header {
+	font-family: 'Neucha';
+	font-variant: small-caps;
+	text-align: center;
+}
+@media screen and (max-width: 1200px) {
+	header {
+		font-size: 15vw;
+		word-spacing: -1.5vw;
+	}
+}
+@media screen and (min-width: 1201px) {
+	header {
+		font-size: 180px;
+		word-spacing: -18px;
+	}
+}
+
+#nav {
+	text-align: right;
+}
+nav-link, list-group, list-group-item {
+	color: rgba(0,0,255,.05)
+}
+
+button.nav-link.active {
+    background-color: rgba(0,0,255,.1) !important;
+}
+
+/*#content {
+	height:88%;
+}*/
+
+#pills-contact {
+	max-width: 600px;
+}
+
+#pills-contact div:last-of-type {
+	text-align: right;
+}
+
+.card {
+	margin: 0 auto; /* Added */
+	float: none; /* Added */
+	margin-bottom: 10px; /* Added */
+	background: transparent;
+}
+
+#pills-links img {
+	width: 50%;
+	max-width: 400px;
+}
