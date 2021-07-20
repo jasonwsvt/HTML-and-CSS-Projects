@@ -130,17 +130,50 @@
 		</div>
 		<!-- END SHOWTIMES SECTION -->
 
-		<!-- SHOWTIMES -->
-		<div id="rewards" class="text-center my-5">
-			<form>
-				<h1 class="text-primary">Sign up for Movie Club Rewards!</h1>
-				<div class="form-group my-1" style="width: 50%; margin: auto;">
-					<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-				</div>
-				<button type="submit" class="btn btn-primary">Submit</button>
-			  </form>
+		<!-- JUMBOTRON HEADING FOR WEEKLY NEWSLETTER SIGNUP -->
+		<div class="jumbotron jumbotron-fluid bg-info mt-5 text-center">
+			<div class="container">
+				<h1 class="display-4 hidden-sm-down" style="color:#fff;font-family:roboto; font-weight:900;text-transform:uppercase;">Weekly Newsletter</h1>
+				<p class="lead">Receive a weekly email containing movie release information, premiers, special events, and discounts!  Don't miss a thing!</p>
+				<button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#register">Sign up!</button>
+			</div>
 		</div>
-		<!-- END SHOWTIMES -->
+		<!-- END JUMBOTRON HEADING -->
+
+		<!-- POP-UP MODAL FORM WITH FIELDS FOR FIRST NAME, LAST NAME, AND EMAIL ADDRESS -->
+		<div id="register" class="modal" tabindex="-1">
+			<div class="modal-dialog">
+			  <div class="modal-content">
+				<div class="modal-header">
+				  <h5 class="modal-title">Register to receive our weekly newsletter.</h5>
+				  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				  </button>
+				</div>
+				<div class="modal-body">
+					<form>
+						<fieldset class="form-group">
+							<label for="firstname">First Name:</label>
+							<input type="text" class="form-control" id="firstname" placeholder="first name">
+						</fieldset>
+						<fieldset class="form-group">
+							<label for="lastname">Last Name:</label>
+							<input type="text" class="form-control" id="lastname" placeholder="last name">
+						</fieldset>
+						<fieldset class="form-group">
+							<label for="email">Email Address:</label>
+							<input type="email" class="form-control" id="email" placeholder="email address">
+						</fieldset>
+					</form>
+				</div>
+				<div class="modal-footer">
+				  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+				  <button type="button" class="btn btn-primary">Save changes</button>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		<!-- END MODAL FORM -->
 
 		<div id="deals" class="container my-5">
 			<ul class="nav nav-inline">
@@ -161,8 +194,7 @@
 
 	</div>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
