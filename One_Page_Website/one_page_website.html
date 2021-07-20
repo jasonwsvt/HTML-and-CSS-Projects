@@ -2,19 +2,10 @@
 <html>
 	<head>
 		<title>Jason's small selection of music I like page</title>
-		<style>
-			img {
-				max-width: 300px;
-			}
-
-			input {
-				display: block;
-			}
-		</style>
-		<link rel="stylesheet" href="css/one_page_website.css">
+		<link rel="stylesheet" href="./css/one_page_website.css">
+		<script src="./js/one_page_website.js" defer></script>
 	</head>
 	<body>
-
 		<!-- NAV SECTION -->
 		<nav>
 			<a href="#home">Home</a>
@@ -32,9 +23,122 @@
 
 		<!-- PICTURES SECTION -->
 		<section id = "pictures">
-			<img src="https://ih1.redbubble.net/image.402966195.1928/poster,504x498,f8f8f8-pad,600x600,f8f8f8.u11.jpg" alt="Tim Minchin">
-			<img src="https://cdn.shopify.com/s/files/1/0473/6097/files/NEW_SHOPIFY_LOGO_NOTEXT_V1_1300x.png?v=1583672496" alt="Wintergatan">
-			<img src="https://stevenseagulls.com/wp-content/uploads/snslogo.jpg" alt="Steve 'n' Seagulls">
+		<!-- Images used to open the lightbox -->
+		<div class="row">
+			<div class="column">
+				<img src="./images/20180915_064213494.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
+			</div>
+			<div class="column">
+				<img src="./images/20180917_073527600.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow">
+			</div>
+			<div class="column">
+				<img src="./images/IMG_20180915_161521679.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
+			</div>
+			<div class="column">
+				<img src="./images/20191025_160348.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+			</div>
+			<div class="column">
+				<img src="./images/PXL_20200926_200636353.PANO.jpg" onclick="openModal();currentSlide(5)" class="hover-shadow">
+			</div>
+			<div class="column">
+				<img src="./images/PANO_20200428_175028.vr.jpg" onclick="openModal();currentSlide(6)" class="hover-shadow">
+			</div>
+			<div class="column">
+				<img src="./images/PXL_20210411_200801753.PANO.jpg" onclick="openModal();currentSlide(7)" class="hover-shadow">
+			</div>
+			<div class="column">
+				<img src="./images/PANO_20200621_193324.vr.jpg" onclick="openModal();currentSlide(8)" class="hover-shadow">
+			</div>
+		</div>
+
+		<!-- The Modal/Lightbox -->
+		<div id="myModal" class="modal">
+			<span class="close cursor" onclick="closeModal()">&times;</span>
+			<div class="modal-content">
+
+				<div class="mySlides">
+					<div class="numbertext">1 / 8</div>
+					<img src="./images/20180915_064213494.jpg" style="width:100%">
+				</div>
+
+				<div class="mySlides">
+					<div class="numbertext">2 / 8</div>
+					<img src="./images/20180917_073527600.jpg" style="width:100%">
+				</div>
+
+				<div class="mySlides">
+					<div class="numbertext">3 / 8</div>
+					<img src="./images/IMG_20180915_161521679.jpg" style="width:100%">
+				</div>
+
+				<div class="mySlides">
+					<div class="numbertext">4 / 8</div>
+					<img src="./images/20191025_160348.jpg" style="width:100%">
+				</div>
+
+				<div class="mySlides">
+					<div class="numbertext">5 / 8</div>
+					<img src="./images/PXL_20200926_200636353.PANO.jpg" style="width:100%">
+				</div>
+
+				<div class="mySlides">
+					<div class="numbertext">6 / 8</div>
+					<img src="./images/PANO_20200428_175028.vr.jpg" style="width:100%">
+				</div>
+
+				<div class="mySlides">
+					<div class="numbertext">7 / 8</div>
+					<img src="./images/PXL_20210411_200801753.PANO.jpg" style="width:100%">
+				</div>
+
+				<div class="mySlides">
+					<div class="numbertext">8 / 8</div>
+					<img src="./images/PANO_20200621_193324.vr.jpg" style="width:100%">
+				</div>
+
+				<!-- Next/previous controls -->
+				<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+				<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+				<!-- Caption text -->
+				<div class="caption-container">
+					<p id="caption"></p>
+				</div>
+
+				<!-- Thumbnail image controls -->
+				<div class="column">
+					<img class="demo" src="./images/20180915_064213494.jpg" onclick="currentSlide(1)" alt="Nature">
+				</div>
+
+				<div class="column">
+					<img class="demo" src="./images/20180917_073527600.jpg" onclick="currentSlide(2)" alt="Snow">
+				</div>
+
+				<div class="column">
+					<img class="demo" src="./images/IMG_20180915_161521679.jpg" onclick="currentSlide(3)" alt="Lights">
+				</div>
+
+				<div class="column">
+					<img class="demo" src="./images/20191025_160348.jpg" onclick="currentSlide(4)" alt="Mountains">
+				</div>
+
+				<div class="column">
+					<img class="demo" src="./images/PXL_20200926_200636353.PANO.jpg" onclick="currentSlide(5)" alt="Mountains">
+				</div>
+
+				<div class="column">
+					<img class="demo" src="./images/PANO_20200428_175028.vr.jpg" onclick="currentSlide(6)" alt="Nature">
+				</div>
+
+				<div class="column">
+					<img class="demo" src="./images/PXL_20210411_200801753.PANO.jpg" onclick="currentSlide(7)" alt="Lights">
+				</div>
+
+				<div class="column">
+					<img class="demo" src="./images/PANO_20200621_193324.vr.jpg" onclick="currentSlide(8)" alt="Snow">
+				</div>
+			</div>
+		</div>
 		</section>
 		<!-- END PICTURES SECTION -->
 
