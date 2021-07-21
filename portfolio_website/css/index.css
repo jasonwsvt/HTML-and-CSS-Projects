@@ -6,25 +6,40 @@ body {
 	background-image: url('../images/UrubambaRiver.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
+	background-attachment: fixed;
 	background-position: center center;
+	margin: 0;
 	height: 100%;
+	max-height: 100%;
+	opacity: 1;
+	transition: 1s opacity;
+}
+
+body.fade-out {
+	opacity: 0;
+	transition: none;
 }
 
 header {
+	padding: 0;
+	margin: 0;
 	font-family: 'Neucha';
 	font-variant: small-caps;
 	text-align: center;
+	vertical-align: center;
 }
 @media screen and (max-width: 1200px) {
 	header {
 		font-size: 15vw;
 		word-spacing: -1.5vw;
+		line-height: 15vw;
 	}
 }
 @media screen and (min-width: 1201px) {
 	header {
 		font-size: 180px;
 		word-spacing: -18px;
+		line-height: 180px;
 	}
 }
 
@@ -36,15 +51,16 @@ nav-link, list-group, list-group-item {
 }
 
 button.nav-link.active {
-    background-color: rgba(0,0,255,.1) !important;
+    background-color: rgba(0,0,125,.2) !important;
 }
 
-/*#content {
-	height:88%;
-}*/
+#content {
+	overflow-y: auto !important;
+}
 
 #pills-contact {
 	max-width: 600px;
+	margin: auto auto !important;
 }
 
 #pills-contact div:last-of-type {
@@ -52,10 +68,15 @@ button.nav-link.active {
 }
 
 .card {
-	margin: 0 auto; /* Added */
-	float: none; /* Added */
-	margin-bottom: 10px; /* Added */
-	background: transparent;
+	margin: 0 auto;
+	float: none;
+	margin-bottom: 10px;
+	background: rgba(0, 0, 0, .2);
+}
+
+#pills-about {
+	padding: 1em;
+	background: rgba(0, 0, 0, .2);
 }
 
 #pills-links img {

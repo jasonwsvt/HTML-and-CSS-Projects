@@ -11,9 +11,10 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Neucha&display=swap" rel="stylesheet">
+		<script src="js/index.js" defer></script> 
 		<title>Jason Storer's Portfolio Website</title>
 	</head>
-  	<body>
+  	<body class='fade-out'>
 		<header>Jason&nbsp;W&nbsp;Storer.com</header>
 		<ul class="nav nav-pills mb-3 justify-content-end" id="nav" role="tablist">
 			<li class="nav-item" role="presentation">
@@ -29,25 +30,36 @@
 			  	<button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Contact</butto>
 			</li>
 	  	</ul>
-		<div class="tab-content mx-5" id="content">
-			<div class="tab-pane fade show active text-light" id="pills-about" role="tabpanel" aria-labelledby="pills-about-tab">
-				<p>I spend a lot of time walking around in the woods and talking to trees, and squirrels, and little rabbits and stuff. These things happen automatically. All you have to do is just let them happen. Let's put a touch more of the magic here. Just let this happen. We just let this flow right out of our minds. This is the time to get out all your flustrations, much better than kicking the dog around the house or taking it out on your spouse. Now it's beginning to make a little sense. Working it up and down, back and forth. All you have to do is let your imagination go wild.</p>
-				<p>Making all those little fluffies that live in the clouds. Maybe we got a few little happy bushes here, just covered with snow. There's not a thing in the world wrong with washing your brush. With practice comes confidence. This is a fantastic little painting. We'll lay all these little funky little things in there.</p>
-				<p>Once you learn the technique, ohhh! Turn you loose on the world; you become a tiger. It's so important to do something every day that will make you happy. Only think about one thing at a time. Don't get greedy. Now we'll take the almighty fan brush. But we're not there yet, so we don't need to worry about it. Put it in, leave it alone. Maybe, just to play a little, we'll put a little tree here. A happy cloud.</p>
+		<div class="tab-content fade-out" id="content">
+			<div class="tab-pane fade show active mx-5 text-light" id="pills-about" role="tabpanel" aria-labelledby="pills-about-tab">
+				<p>I suppose when it gets down to it, it's kinda tough to call myself anything in particular.  I spend most of my time right now working on a software developer bootcamp through The Tech Academy.  In my free time I really enjoy off-leash trail running with my dog, learning Spanish, listening to audiobooks mostly in the sci-fi/fantasy genre, cooking up gluten free whole food plant based dishes, and getting to a weekly board game night.  I hope to experience life in many places around the United States, and perhaps at some point, the world.</p>
+				<p>I've been coding since I was super young - like five or so years old, when my dad brought home an IBM PC jr. and I spent many hours with BASIC.  Years later I would go to the University of Vermont and graduate with a degree in Applied Mathematics and minor in Computer Science.  I'm excited to now focus my career path on software development, and the Tech Academy bootcamp should provide a very effective kick-start!</p>
+				<p>Feel free to check out the site.  I have a portfolio of projects, links to my profiles on LinkedIn, Indeed, and GitHub, and a contact form.</p>
 			</div>
 			<div class="tab-pane fade" id="pills-portfolio" role="tabpanel" aria-labelledby="pills-portfolio-tab">
 
-				<div class="tab-content text-light" id="portfolio-tabContent">
+				<ul class="nav nav-pills mb-3 justify-content-end" id="portfolio-tab" role="tablist">
+					<li class="nav-item" role="presentation">
+					  	<button class="nav-link active" id="portfolio-project1-tab" data-bs-toggle="pill" data-bs-target="#portfolio-project1" type="button" role="tab" aria-controls="portfolio-project1" aria-selected="true">Project 1</button>
+					</li>
+					<li class="nav-item" role="presentation">
+					  	<button class="nav-link" id="portfolio-project2-tab" data-bs-toggle="pill" data-bs-target="#portfolio-project2" type="button" role="tab" aria-controls="portfolio-project2" aria-selected="false">Project 2</button>
+					</li>
+					<li class="nav-item" role="presentation">
+					  	<button class="nav-link" id="portfolio-project3-tab" data-bs-toggle="pill" data-bs-target="#portfolio-project3" type="button" role="tab" aria-controls="portfolio-project3" aria-selected="false">Project 3</button>
+					</li>
+				</ul>
+				<div class="tab-content mx-5 text-light" id="portfolio-tabContent">
 					<div class="tab-pane fade show active" id="portfolio-project1" role="tabpanel" aria-labelledby="portfolio-project1-tab">
-						<div class="card mb-3" style="max-width: 540px;">
+						<div class="card mb-3" style="max-width: 750px;">
 							<div class="row g-0">
-							  	<div class="col-md-4">
-									<img src="./images/AROBAZE.png" class="img-fluid rounded-start" alt="...">
+							  	<div class="col-md-6">
+									<img src="./images/20190910_174321.jpg" class="img-fluid rounded-start" alt="...">
 							  	</div>
-							  	<div class="col-md-8">
+							  	<div class="col-md-6">
 									<div class="card-body">
-								  		<h5 class="card-title">Project 1</h5>
-								  		<p class="card-text">These trees are so much fun. I get started on them and I have a hard time stopping. Now, we're going to fluff this cloud. This is probably the greatest thing that's ever happened in my life. When things happen - enjoy them. They're little gifts. You can create beautiful things - but you have to see them in your mind first. Let your heart be your guide.</p>
+								  		<h5 class="card-title"><a href="./Monita" target="_blank">Monita Pictures Slideshow</a></h5>
+								  		<p class="card-text">While I was down in Peru, two of my friend Carmen's dogs had puppies, and she offered me one.  That was in 2019, and while I feel the two years since then have turned out very differently than they would have if we weren't together, I wouldn't change a thing.  This is a slideshow I created showing a selection of pictures of her.</p>
 									</div>
 							  	</div>
 							</div>
@@ -56,10 +68,10 @@
 					<div class="tab-pane fade" id="portfolio-project2" role="tabpanel" aria-labelledby="portfolio-project2-tab">
 						<div class="card mb-3" style="max-width: 540px;">
 							<div class="row g-0">
-							  	<div class="col-md-4">
+							  	<div class="col-md-6">
 									<img src="./images/Hash-trans.png" class="img-fluid rounded-start" alt="...">
 							  	</div>
-							  	<div class="col-md-8">
+							  	<div class="col-md-6">
 									<div class="card-body">
 								  		<h5 class="card-title">Project 1</h5>
 								  		<p class="card-text">Do an almighty painting with us. If you hypnotize it, it will go away. I get carried away with this brush cleaning. No worries. No cares. Just float and wait for the wind to blow you around. Now it's beginning to make a little sense. Nothing's gonna make your husband or wife madder than coming home and having a snow-covered dinner. Nice little clouds playing around in the sky. No pressure. Just relax and watch it happen. In your world you can create anything you desire. If I paint something, I don't want to have to explain what it is. We'll put a happy little sky in here.</p>
@@ -71,10 +83,10 @@
 					<div class="tab-pane fade" id="portfolio-project3" role="tabpanel" aria-labelledby="portfolio-project3-tab">
 						<div class="card mb-3" style="max-width: 540px;">
 							<div class="row g-0">
-							  	<div class="col-md-4">
+							  	<div class="col-md-6">
 									<img src="./images/Plantilla_wiki.png" class="img-fluid rounded-start" alt="...">
 							  	</div>
-							  	<div class="col-md-8">
+							  	<div class="col-md-6">
 									<div class="card-body">
 								  		<h5 class="card-title">Project 1</h5>
 								  		<p class="card-text">We have all at one time or another mixed some mud. I thought today we would do a happy little picture. Imagination is the key to painting. And maybe, maybe, maybe... All you have to do is let your imagination go wild. Just make a decision and let it go. This is probably the greatest thing to happen in my life - to be able to share this with you.</p>
@@ -84,42 +96,31 @@
 						</div>
 					</div>
 				</div>
-				<ul class="nav nav-pills mb-3 justify-content-center" id="portfolio-tab" role="tablist">
-					<li class="nav-item" role="presentation">
-					  	<button class="nav-link active" id="portfolio-project1-tab" data-bs-toggle="pill" data-bs-target="#portfolio-project1" type="button" role="tab" aria-controls="portfolio-project1" aria-selected="true">Project 1</button>
-					</li>
-					<li class="nav-item" role="presentation">
-					  	<button class="nav-link" id="portfolio-project2-tab" data-bs-toggle="pill" data-bs-target="#portfolio-project2" type="button" role="tab" aria-controls="portfolio-project2" aria-selected="false">Project 2</button>
-					</li>
-					<li class="nav-item" role="presentation">
-					  	<button class="nav-link" id="portfolio-project3-tab" data-bs-toggle="pill" data-bs-target="#portfolio-project3" type="button" role="tab" aria-controls="portfolio-project3" aria-selected="false">Project 3</button>
-					</li>
-				</ul>
 
 			</div>
-			<div class="tab-pane fade text-center" id="pills-links" role="tabpanel" aria-labelledby="pills-links-tab">
+			<div class="tab-pane fade mx-5 text-center" id="pills-links" role="tabpanel" aria-labelledby="pills-links-tab">
 
 				<ul class="list-group list-group-flush bg-transparent">
 					<li class="list-group-item bg-transparent"><h1>Profiles</h1></li>
 					<li class="list-group-item bg-transparent">
-						<a href="https://www.linkedin.com/in/jason-storer/">
+						<a href="https://www.linkedin.com/in/jason-storer/" target="_blank">
 							<img src="https://pngimg.com/uploads/linkedIn/linkedIn_PNG10.png" width="50%" alt="LinkedIn logo">
 						</a>
 					</li>
 					<li class="list-group-item bg-transparent">
-						<a href="https://my.indeed.com/p/jasons-gwqectw">
+						<a href="https://my.indeed.com/p/jasons-gwqectw" target="_blank">
 							<img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Indeed_logo.png" width="50%" alt="Indeed logo">
 						</a>
 					</li>
 					<li class="list-group-item bg-transparent">
-						<a href="https://github.com/jasonwsvt">
+						<a href="https://github.com/jasonwsvt" target="_blank">
 							<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/GitHub_logo_2013.svg/1200px-GitHub_logo_2013.svg.png" width="50%" alt="Indeed logo">
 						</a>
 					</li>
 				  </ul>
 
 			</div>
-			<div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+			<div class="tab-pane mx-5 fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
 				<form
 					action="https://formspree.io/f/xeqvlerj"
 					method="POST"
@@ -128,13 +129,13 @@
 					onsubmit="this.submit(); this.reset(); return false;"
 				>
 					<div class="mb-3">
-						<input type="text" class="form-control" name="name" placeholder="first and last name">
+						<input type="text" class="form-control" name="name" placeholder="name" required>
 					</div>
 					<div class="mb-3">
-						<input type="email" class="form-control" name="_replyto" placeholder="email address">
+						<input type="email" class="form-control" name="_replyto" placeholder="email address" required>
 					</div>
 					<div class="mb-3">
-						<textarea class="form-control" name="message" rows="3" placeholder="message"></textarea>
+						<textarea class="form-control" name="message" rows="3" placeholder="message" required></textarea>
 					</div>
 					<div class="mb-3">
 						<input class="btn btn-outline-info pull-right" type="submit" value="Submit">
