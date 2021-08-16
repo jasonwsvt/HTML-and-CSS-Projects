@@ -3,5 +3,5 @@ These are projects written in HTML and CSS for the Tech Academy Software Develop
 <ul>
   <li><a href="https://github.com/jasonwsvt/HTML-and-CSS-Projects/blob/main/Basic_HTML_Website/index.html"> - A website for a fictitious international slot canyon tour company.</a></li>
   <li><a href="https://github.com/jasonwsvt/HTML-and-CSS-Projects/tree/main/portfolio_website"> - An early version of my portfolio website.</a></li>
-  <li><a href="file:///C:/Users/jason/Documents/GitHub/HTML-and-CSS-Projects/bootstrap4_project/academy_cinemas.html"> - A website for a fictitious movie theater.</a></li>
+  <li><a href="https://github.com/jasonwsvt/HTML-and-CSS-Projects/bootstrap4_project/academy_cinemas.html"> - A website for a fictitious movie theater.</a></li>
 </ul>
