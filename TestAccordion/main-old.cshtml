@@ -1,0 +1,97 @@
+@model IEnumerable<TheatreCMS3.Areas.Rent.Models.RentalHistory>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p class="justify-content-start">
+    @Html.ActionLink("Create New", "Create")
+</p>
+<div id="RentalHistoryIndex" class="container justify-content-start px-0 py-0">
+    <div class="row mx-1">
+        <div class="my-auto mx-0">
+            Most recent Rental Histories
+        </div>
+
+        <div class="my-auto ml-auto">
+            Sorted by:
+        </div>
+        <div class="mr-0">
+            <div class="btn-group mr-0" id="sort-methods">
+                <button type="button" class="btn btn-light dropdown-toggle mr-0 px-1 py-0 my-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Dropdown
+                </button>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <div class="dropdown-item active" data-sort="index">No Extra Sorting...</div>
+                    <div class="dropdown-item" data-sort="damaged">Damaged Rentals</div>
+                    <div class="dropdown-item" data-sort="undamaged">Undamaged Rentals</div>
+                    <div class="dropdown-item" data-sort="a-z">Rentals A-Z</div>
+                    <div class="dropdown-item" data-sort="z-a">Rentals Z-A</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @{ int index = 0; }
+    @foreach (var item in Model)
+    {
+        <div class="rentalItem row py-1 mx-0" data-index="@index" data-damaged="@item.RentalDamaged" data-name="@item.Rental">
+            @{ index++; }
+            @if (item.RentalDamaged)
+            {
+                <div class="text-danger">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
+                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z" />
+                    </svg>
+                </div>
+            }
+            else
+            {
+                <div class="text-success">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                    </svg>
+                </div>
+            }
+            <div class="rental px-1 my-auto">
+                @Html.DisplayFor(modelItem => item.Rental)
+            </div>
+            <div class="my-auto">
+                @Html.DisplayFor(modelItem => item.DamagesIncurred)
+            </div>
+            <div class="ml-auto">
+                <div class="btn-group menu">
+                    <button type="button" class="btn btn-outline-dark p-0 pb-1 my-auto invisible" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                            <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+                        </svg>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <div class="dropdown-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                                <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                                <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
+                            </svg>
+                            @Html.ActionLink("Edit", "Edit", new { id = item.RentalHistoryId }, new { @class = "text-dark" })
+                        </div>
+                        <div class="dropdown-item" href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle-fill text-dark" viewBox="0 0 16 16">
+                                <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
+                            </svg>
+                            @Html.ActionLink("Details", "Details", new { id = item.RentalHistoryId }, new { @class = "text-dark" })
+                        </div>
+                        <div class="dropdown-divider"></div>
+                        <div class="dropdown-item text-danger" href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+                                <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z" />
+                            </svg>
+                            @Html.ActionLink("Delete", "Delete", new { id = item.RentalHistoryId }, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+
+</div>
